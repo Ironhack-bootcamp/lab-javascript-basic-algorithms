@@ -41,11 +41,22 @@ for (let i = driversName.length - 1; i >= 0; i--) {
 console.log(reverseName);
 
 //3.3
+/*
 let firstLetterDriver = driversName.charAt(0);
 let firstLetterNavigator = navigatorsName.charAt(0);
 if (firstLetterNavigator < firstLetterDriver) {
     console.log("The driver's name goes first.");
 } else if (firstLetterNavigator > firstLetterDriver) {
+    console.log("The driver's name goes first.");
+} else {
+    console.log('What?! You both have the same name?');
+}
+*/
+
+let compare = driversName.localeCompare(navigatorsName);
+if (compare === 1) {
+    console.log("The driver's name goes first.");
+} else if (compare === -1) {
     console.log("The driver's name goes first.");
 } else {
     console.log('What?! You both have the same name?');
